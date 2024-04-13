@@ -1,6 +1,5 @@
 import { configureAxios } from '../api/configureAxios'
 import PersonView from '../components/person/PersonView'
-import Toolbar from '../components/toolbar/Toolbar'
 
 // Configure Axios with a callback function to handle unauthorized requests.
 // If a request is unauthorized, the function will remove the onbeforeunload event handler and reload the page.
@@ -23,9 +22,6 @@ configureAxios({
 const AppRoot = () => {
   return (
     <div className="c-app-container">
-      <div className="c-app-container__toolbar">
-        <Toolbar />
-      </div>
       <div className="c-app-container__content reverse_column">
         <PersonView />
       </div>

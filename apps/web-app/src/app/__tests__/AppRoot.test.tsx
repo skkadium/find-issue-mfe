@@ -26,13 +26,10 @@ describe('app/AppRoot', () => {
     usePersonStore.setState({ persons: [] })
 
     // Act
-    const { container } = await act(async () => renderWithQueryProvider(<AppRoot />))
+    await act(async () => renderWithQueryProvider(<AppRoot />))
 
     // Assert
-    const heading = container.querySelector('h2')
     const columnHeaders = await screen.findAllByRole('columnHeader')
-
-    expect(heading).toHaveTextContent('PPE Web Application')
 
     expect(columnHeaders).toHaveLength(5)
     expect(columnHeaders.at(0)).toHaveTextContent('FullName')
@@ -51,14 +48,11 @@ describe('app/AppRoot', () => {
     usePersonStore.setState({ persons: mockedPersonDetails })
 
     // Act
-    const { container } = await act(async () => renderWithQueryProvider(<AppRoot />))
+    await act(async () => renderWithQueryProvider(<AppRoot />))
 
     // Assert
-    const heading = container.querySelector('h2')
     const columnHeaders = await screen.findAllByRole('columnHeader')
     const cells = await screen.findAllByRole('cell')
-
-    expect(heading).toHaveTextContent('PPE Web Application')
 
     expect(columnHeaders).toHaveLength(5)
     expect(columnHeaders.at(0)).toHaveTextContent('FullName')

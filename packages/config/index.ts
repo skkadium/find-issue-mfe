@@ -1,5 +1,5 @@
 export const config = {
-  appName: '${webapp-name}',
+  appName: 'find-issue',
   authMock: {
     port: 6000,
     url: 'http://localhost:6000'
@@ -14,7 +14,7 @@ export const config = {
   bff: {
     api: {
       contentType: 'application/json; charset=utf-8',
-      path: '/services/ppe-graph-bff-${webapp-name}/graphql'
+      path: '/services/ppe-graph-bff-find-issue/graphql'
     }
   },
   personBff: {
@@ -27,8 +27,8 @@ export const config = {
     brokerUrl: 'https://pact-broker.ppe-np.elsevier.net/',
     consumerVersion: '1.0.0',
     bff: {
-      consumerName: 'ppe-web-${webapp-name}',
-      providerName: 'ppe-graph-bff-${webapp-name}',
+      consumerName: 'ppe-web-find-issue',
+      providerName: 'ppe-graph-bff-find-issue',
       pactFolder: 'pacts',
       mockProvider: {
         api: {
@@ -49,7 +49,7 @@ export const config = {
   },
   webApp: {
     port: 8080,
-    path: '/web/ppe-web-${webapp-name}',
+    path: '/web/ppe-web-find-issue',
     helpUrl: 'https://elsevier.atlassian.net/wiki/spaces/PPECOMMS/overview'
   }
 }

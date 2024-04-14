@@ -1,8 +1,8 @@
 import { Person } from '../../components/person/types'
 import { PersonState, initialPersonState } from './types'
-import { createWithEqualityFn } from 'zustand/traditional'
+import { create } from 'zustand'
 
-const usePersonStore = createWithEqualityFn<PersonState>(() => ({
+const usePersonStore = create<PersonState>(() => ({
   ...initialPersonState
 }))
 

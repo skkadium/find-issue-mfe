@@ -48,7 +48,7 @@ export const config = {
     }
   },
   webApp: {
-    port: 8080,
+    port: 8081,
     path: '/web/ppe-web-find-issue',
     helpUrl: 'https://elsevier.atlassian.net/wiki/spaces/PPECOMMS/overview'
   }

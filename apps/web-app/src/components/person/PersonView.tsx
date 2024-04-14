@@ -1,4 +1,3 @@
-import { shallow } from 'zustand/shallow'
 import useGetPersonDetails from '../../hooks/useGetPersonDetails'
 import usePersonStore from '../../store/person/personStore'
 import FixedTable from '../ui/FixedTable'
@@ -6,7 +5,7 @@ import { Person } from './types'
 
 const PersonView = () => {
   useGetPersonDetails()
-  const persons = usePersonStore(state => state.persons, shallow)
+  const persons = usePersonStore(state => state.persons)
   return (
     <FixedTable.Table label="tasklist" className="c-person__table">
       <FixedTable.Header>

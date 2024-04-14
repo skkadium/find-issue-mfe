@@ -10,6 +10,7 @@
     "bootstrap": "yarn generate-mock",
     "generate-mock": "tsx scripts/generate-mock.ts",
     "start": "nodemon --watch 'mock.json' --exec tsx src/server.ts",
+    "preview": "nodemon --watch 'mock.json' --exec tsx src/server.ts",
     "test": "echo pact tests are stopped"
   },
   "devDependencies": {

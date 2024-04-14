@@ -20,13 +20,7 @@ configureAxios({
  * A React Element representing the root of the application UI.
  */
 const AppRoot = () => {
-  return (
-    <div className="c-app-container">
-      <div className="c-app-container__content reverse_column">
-        <PersonView />
-      </div>
-    </div>
-  )
+  return <PersonView />
 }
 
 export default AppRoot

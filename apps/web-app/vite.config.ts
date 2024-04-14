@@ -14,8 +14,10 @@ export default defineConfig({
       name: config.appName,
       filename: 'remoteEntry.js',
       remotes: {},
-      exposes: {},
-      shared: ['react', 'react-dom']
+      exposes: {
+        './App': './src/app/AppRoot'
+      },
+      shared: ['react', 'react-dom', 'zustand', '@tanstack/react-query']
     })
   ],
   server: {
@@ -44,6 +46,10 @@ export default defineConfig({
       [config.bff.api.path]: {
         target: config.bffMock.url,
         rewrite: (path: string) => path.replace(config.bff.api.path, '/')
+      },
+      [config.personBff.api.path]: {
+        target: config.bffMock.url,
+        rewrite: (path: string) => path.replace(config.personBff.api.path, '/')
       }
     }
   },

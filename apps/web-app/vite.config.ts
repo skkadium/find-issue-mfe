@@ -17,7 +17,7 @@ export default defineConfig({
       exposes: {
         './App': './src/app/AppRoot'
       },
-      shared: ['react', 'react-dom', 'zustand', '@tanstack/react-query']
+      shared: ['react', 'react-dom', 'zustand', '@tanstack/react-query', 'axios']
     })
   ],
   server: {
